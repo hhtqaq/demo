@@ -8,20 +8,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Date: 2019/6/25 21:51
  * @Description:
  */
-@RequestMapping("/student")
 @Controller
 public class StudentController {
 
-    @RequestMapping("addStudent")
+    @RequestMapping("/student/addStudent")
     public String addStudent(){
-        return "addStudent";
+        return "/page/addStudent";
     }
-    @RequestMapping("updateStudent")
+    @RequestMapping("/student/updateStudent")
     public String updateStudent(){
-        return "updateStudent";
+        return "/page/updateStudent";
     }
-    @RequestMapping("deleteStudent")
+    @RequestMapping("/student/deleteStudent")
     public String deleteStudent(){
-        return "deleteStudent";
+        return "/page/deleteStudent";
+    }
+    @RequestMapping("/index")
+    public String index(){
+        return "index";
     }
 }
